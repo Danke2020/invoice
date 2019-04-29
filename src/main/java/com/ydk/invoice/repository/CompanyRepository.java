@@ -1,9 +1,12 @@
 package com.ydk.invoice.repository;
 
-import com.ydk.invoice.model.Company;
+import com.ydk.invoice.model.CompanyInfo;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
+import org.springframework.data.rest.core.annotation.RepositoryRestResource;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
-@Repository
-public interface CompanyRepository extends JpaRepository<Company, String> {
+@CrossOrigin
+@RepositoryRestResource(path = "company", collectionResourceRel = "company")
+public interface CompanyRepository extends JpaRepository<CompanyInfo, String> {
+
 }

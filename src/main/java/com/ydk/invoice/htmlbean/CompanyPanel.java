@@ -8,7 +8,7 @@ import com.geccocrawler.gecco.spider.HtmlBean;
 import lombok.Data;
 
 @Data
-@Gecco(matchUrl = "https://www.qichacha.com/tax_view?keyno={keyNo}", pipelines = {"consolePipeline"})
+@Gecco(matchUrl = "https://www.qichacha.com/tax_view?keyno={keyNo}", pipelines = {"companyPanelPipeline"})
 public class CompanyPanel implements HtmlBean {
 
     @RequestParameter(value = "keyNo")

@@ -1,5 +1,6 @@
 package com.ydk.invoice.htmlbean;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.geccocrawler.gecco.annotation.Gecco;
 import com.geccocrawler.gecco.annotation.HtmlField;
 import com.geccocrawler.gecco.annotation.RequestParameter;
@@ -20,6 +21,7 @@ public class CompanyPanel implements HtmlBean {
 
     @Text
     @HtmlField(cssPath = "div.panel-body.m-t.m-b-lg > form > div:nth-child(2) > div > p")
+    @JsonProperty(value = "id")
     private String creditCode;
 
     @Text
@@ -36,6 +38,7 @@ public class CompanyPanel implements HtmlBean {
 
     @Text
     @HtmlField(cssPath = "div.panel-body.m-t.m-b-lg > form > div:nth-child(6) > div > p")
+    @JsonProperty(value = "account")
     private String bankAccount;
 
 }

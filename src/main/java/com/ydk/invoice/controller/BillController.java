@@ -49,6 +49,7 @@ public class BillController {
 
     @GetMapping(value = "/company/key/{query}")
     public List<CompanyPanel> fetchList(@PathVariable String query) {
+        CompanyPanelPipeline.companyPanels.clear();
         HttpGetRequest start = new HttpGetRequest("https://www.qichacha.com/tax_search?key=" + query);
         GeccoEngine.create()
                 .pipelineFactory(springPipelineFactory)

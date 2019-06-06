@@ -1,6 +1,7 @@
 package com.ydk.invoice.model;
 
 import lombok.Data;
+import org.springframework.hateoas.Identifiable;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
@@ -8,10 +9,10 @@ import java.math.BigDecimal;
 @Data
 @Entity
 @Table(name = "bill_info")
-public class BillInfo {
+public class BillInfo implements Identifiable<Integer> {
     @Id
     @GeneratedValue
-    private int id;
+    private Integer id;
     private String signdate;
     private String material;
     private String size;

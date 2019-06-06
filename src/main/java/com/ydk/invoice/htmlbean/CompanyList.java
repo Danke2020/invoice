@@ -20,17 +20,4 @@ public class CompanyList implements HtmlBean {
     @HtmlField(cssPath="section.panel a")
     private List<HrefBean> details;
 
-    /*public static void main(String[] args) {
-        //先获取分类列表
-        HttpGetRequest start = new HttpGetRequest("https://www.qichacha.com/tax_search?key=福建火");
-        GeccoEngine.create().debug(false)
-                .classpath("com.ydk.invoice.htmlbean")
-                //开始抓取的页面地址
-                .start(start)
-                //开启几个爬虫线程
-                .thread(1)
-                //单个爬虫每次抓取完一个请求后的间隔时间
-                .interval(2000)
-                .start();
-    }*/
 }
